@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carlos Maldonado — Desarrollador Full Stack & Móvil</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Syne (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════ PANTALLA DE CARGA ═══════════════════════════════ -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">CM</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <p class="loader-text">Cargando experiencia…</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ CURSOR PERSONALIZADO ═══════════════════════════════ -->
+  <div id="cursor"></div>
+  <div id="cursor-follower"></div>
+
+  <!-- ═══════════════════════════════ PROGRESO DE SCROLL ═══════════════════════════════ -->
+  <div id="scroll-progress"></div>
+
+  <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="nav-logo">CM<span class="dot">.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inicio" class="nav-link">Inicio</a></li>
+        <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+        <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+        <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+        <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
+        <li><a href="#servicios" class="nav-link">Servicios</a></li>
+        <li><a href="#contacto" class="nav-link cta-nav">Contacto</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+  <section id="inicio" class="hero">
+    <canvas id="particles-canvas"></canvas>
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <span class="badge-dot"></span>Disponible para proyectos
+      </div>
+      <h1 class="hero-name reveal-up delay-1">Carlos<br /><span class="accent">Maldonado.</span></h1>
+      <p class="hero-role reveal-up delay-2">
+        <span id="typing-text"></span><span class="cursor-blink">|</span>
+      </p>
+      <p class="hero-desc reveal-up delay-3">
+        Diseño y construyo experiencias digitales de alto impacto.<br />
+        Full Stack · Móvil · Apasionado por el código limpio y el diseño moderno.
+      </p>
+      <div class="hero-actions reveal-up delay-4">
+        <a href="#proyectos" class="btn btn-primary ripple">Ver Proyectos</a>
+        <a href="cv-carlos-maldonado.pdf" download class="btn btn-ghost ripple">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Descargar CV
+        </a>
+      </div>
+      <div class="hero-social reveal-up delay-5">
+        <a href="https://github.com" target="_blank" class="social-icon" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+        <a href="https://linkedin.com" target="_blank" class="social-icon" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="mailto:carlos@ejemplo.com" class="social-icon" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Desplázate</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ SOBRE MÍ ═══════════════════════════════ -->
+  <section id="sobre-mi" class="about section-padding">
+    <div class="container">
+      <div class="section-label reveal-up">Sobre Mí</div>
+      <div class="about-grid">
+        <div class="about-image-wrap reveal-up delay-1">
+          <div class="about-img-placeholder">
+            <img src="https://picsum.photos/seed/dev1/500/600" alt="Carlos Maldonado" />
+            <div class="img-glow"></div>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card glass reveal-up delay-2">
+              <span class="stat-num">+3</span>
+              <span class="stat-label">Años de experiencia</span>
+            </div>
+            <div class="stat-card glass reveal-up delay-3">
+              <span class="stat-num">+20</span>
+              <span class="stat-label">Proyectos entregados</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-text reveal-up delay-2">
+          <h2 class="section-title">Construyo el futuro<br /><span class="accent">línea a línea.</span></h2>
+          <p class="about-desc">
+            Soy un desarrollador Full Stack y Móvil apasionado por transformar ideas complejas en productos digitales elegantes y funcionales. Me especializo en crear aplicaciones web robustas con <strong>Laravel</strong> y experiencias móviles fluidas con <strong>Flutter</strong>.
+          </p>
+          <p class="about-desc">
+            Mi enfoque combina arquitecturas backend sólidas con interfaces de usuario que realmente importan. Cada proyecto es una oportunidad para superar expectativas, escribir código limpio y entregar valor real.
+          </p>
+          <div class="about-tags">
+            <span class="tag">Laravel</span>
+            <span class="tag">Flutter</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">C# / .NET</span>
+            <span class="tag">SQL</span>
+            <span class="tag">HTML & CSS</span>
+          </div>
+          <a href="#contacto" class="btn btn-primary ripple" style="margin-top:2rem;">Trabajemos juntos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ HABILIDADES ═══════════════════════════════ -->
+  <section id="habilidades" class="skills section-padding">
+    <div class="container">
+      <div class="section-label reveal-up">Habilidades</div>
+      <h2 class="section-title text-center reveal-up delay-1">Mi <span class="accent">Stack Tecnológico</span></h2>
+      <p class="section-sub text-center reveal-up delay-2">Tecnologías con las que construyo soluciones reales y escalables.</p>
+      <div class="skills-grid">
+
+        <div class="skill-card glass reveal-up delay-1">
+          <div class="skill-icon" style="--glow:#FF2D20">
+            <svg viewBox="0 0 50 50" fill="none"><path d="M25 5L5 15v20l20 10 20-10V15L25 5z" stroke="#FF2D20" stroke-width="2"/><path d="M25 5v30M5 15l20 10 20-10" stroke="#FF2D20" stroke-width="1.5" opacity=".5"/></svg>
+          </div>
+          <h3 class="skill-name">Laravel</h3>
+          <p class="skill-desc">Framework PHP robusto para APIs y aplicaciones web empresariales.</p>
+          <div class="skill-bar"><div class="skill-fill" data-level="90" style="--color:#FF2D20"></div></div>
+          <span class="skill-level">Avanzado · 90%</span>
+        </div>
+
+        <div class="skill-card glass reveal-up delay-2">
+          <div class="skill-icon" style="--glow:#54C5F8">
+            <svg viewBox="0 0 50 50" fill="none"><path d="M10 10h30L25 40 10 10z" stroke="#54C5F8" stroke-width="2"/><path d="M16 22h18" stroke="#54C5F8" stroke-width="1.5" opacity=".6"/></svg>
+          </div>
+          <h3 class="skill-name">Flutter</h3>
+          <p class="skill-desc">UI multiplataforma con Dart: iOS, Android y web desde un mismo código.</p>
+          <div class="skill-bar"><div class="skill-fill" data-level="85" style="--color:#54C5F8"></div></div>
+          <span class="skill-level">Avanzado · 85%</span>
+        </div>
+
+        <div class="skill-card glass reveal-up delay-3">
+          <div class="skill-icon" style="--glow:#F7DF1E">
+            <svg viewBox="0 0 50 50" fill="none"><rect x="8" y="8" width="34" height="34" rx="3" stroke="#F7DF1E" stroke-width="2"/><path d="M28 30c0 3 1.5 4.5 4 4.5M20 28.5v-9" stroke="#F7DF1E" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="skill-name">JavaScript</h3>
+          <p class="skill-desc">Interactividad, lógica de negocio y experiencias web dinámicas modernas.</p>
+          <div class="skill-bar"><div class="skill-fill" data-level="88" style="--color:#F7DF1E"></div></div>
+          <span class="skill-level">Avanzado · 88%</span>
+        </div>
+
+        <div class="skill-card glass reveal-up delay-1">
+          <div class="skill-icon" style="--glow:#00BFFF">
+            <svg viewBox="0 0 50 50" fill="none"><circle cx="25" cy="25" r="16" stroke="#00BFFF" stroke-width="2"/><path d="M16 20h18M16 25h14M16 30h10" stroke="#00BFFF" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="skill-name">HTML & CSS</h3>
+          <p class="skill-desc">Maquetación semántica y diseño visual de alto nivel con CSS moderno.</p>
+          <div class="skill-bar"><div class="skill-fill" data-level="95" style="--color:#00BFFF"></div></div>
+          <span class="skill-level">Experto · 95%</span>
+        </div>
+
+        <div class="skill-card glass reveal-up delay-2">
+          <div class="skill-icon" style="--glow:#00D8A0">
+            <svg viewBox="0 0 50 50" fill="none"><ellipse cx="25" cy="20" rx="16" ry="7" stroke="#00D8A0" stroke-width="2"/><path d="M9 20v10c0 3.87 7.16 7 16 7s16-3.13 16-7V20" stroke="#00D8A0" stroke-width="2"/></svg>
+          </div>
+          <h3 class="skill-name">SQL / Bases de Datos</h3>
+          <p class="skill-desc">Diseño, optimización y gestión de bases de datos relacionales y no relacionales.</p>
+          <div class="skill-bar"><div class="skill-fill" data-level="82" style="--color:#00D8A0"></div></div>
+          <span class="skill-level">Avanzado · 82%</span>
+        </div>
+
+        <div class="skill-card glass reveal-up delay-3">
+          <div class="skill-icon" style="--glow:#9B59B6">
+            <svg viewBox="0 0 50 50" fill="none"><path d="M15 10l-5 25h30L35 10H15z" stroke="#9B59B6" stroke-width="2"/><path d="M19 22l6 6 10-12" stroke="#9B59B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="skill-name">C# & .NET</h3>
+          <p class="skill-desc">Aplicaciones empresariales, APIs REST y soluciones de backend con el ecosistema Microsoft.</p>
+          <div class="skill-bar"><div class="skill-fill" data-level="78" style="--color:#9B59B6"></div></div>
+          <span class="skill-level">Intermedio · 78%</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ PROYECTOS ═══════════════════════════════ -->
+  <section id="proyectos" class="projects section-padding">
+    <div class="container">
+      <div class="section-label reveal-up">Proyectos</div>
+      <h2 class="section-title text-center reveal-up delay-1">Trabajo <span class="accent">Destacado</span></h2>
+      <p class="section-sub text-center reveal-up delay-2">Proyectos reales que demuestran mi enfoque técnico y mi cuidado por el detalle.</p>
+
+      <div class="projects-grid">
+
+        <!-- Proyecto 1 -->
+        <div class="project-card reveal-up delay-1">
+          <div class="project-img">
+            <img src="https://picsum.photos/seed/proj1/600/400" alt="Sistema de Gestión Empresarial" loading="lazy" />
+            <div class="project-overlay">
+              <div class="project-tech-tags">
+                <span>Laravel</span><span>MySQL</span><span>Blade</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Sistema de Gestión Empresarial</h3>
+            <p class="project-desc">Plataforma web completa para gestión de inventarios, ventas y reportes en tiempo real para una PYME local.</p>
+            <div class="project-actions">
+              <a href="#" class="btn btn-primary btn-sm ripple">Demo en Vivo</a>
+              <a href="#" class="btn btn-ghost btn-sm ripple">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                Repositorio
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 2 -->
+        <div class="project-card reveal-up delay-2">
+          <div class="project-img">
+            <img src="https://picsum.photos/seed/proj2/600/400" alt="App de Delivery Móvil" loading="lazy" />
+            <div class="project-overlay">
+              <div class="project-tech-tags">
+                <span>Flutter</span><span>Firebase</span><span>Dart</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">App de Delivery Móvil</h3>
+            <p class="project-desc">Aplicación multiplataforma para pedidos a domicilio con rastreo en tiempo real, pagos integrados y panel de administración.</p>
+            <div class="project-actions">
+              <a href="#" class="btn btn-primary btn-sm ripple">Demo en Vivo</a>
+              <a href="#" class="btn btn-ghost btn-sm ripple">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                Repositorio
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 3 -->
+        <div class="project-card reveal-up delay-3">
+          <div class="project-img">
+            <img src="https://picsum.photos/seed/proj3/600/400" alt="Portal de Facturación Electrónica" loading="lazy" />
+            <div class="project-overlay">
+              <div class="project-tech-tags">
+                <span>C#</span><span>.NET</span><span>SQL Server</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Portal de Facturación Electrónica</h3>
+            <p class="project-desc">Sistema de facturación compatible con normativas fiscales locales, generación de PDFs y envío automatizado de comprobantes.</p>
+            <div class="project-actions">
+              <a href="#" class="btn btn-primary btn-sm ripple">Demo en Vivo</a>
+              <a href="#" class="btn btn-ghost btn-sm ripple">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                Repositorio
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 4 -->
+        <div class="project-card reveal-up delay-1">
+          <div class="project-img">
+            <img src="https://picsum.photos/seed/proj4/600/400" alt="Plataforma E-commerce" loading="lazy" />
+            <div class="project-overlay">
+              <div class="project-tech-tags">
+                <span>Laravel</span><span>Vue.js</span><span>Stripe</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Plataforma E-commerce</h3>
+            <p class="project-desc">Tienda en línea completa con carrito de compras, pasarela de pagos, panel de vendedor y sistema de reseñas.</p>
+            <div class="project-actions">
+              <a href="#" class="btn btn-primary btn-sm ripple">Demo en Vivo</a>
+              <a href="#" class="btn btn-ghost btn-sm ripple">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                Repositorio
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 5 -->
+        <div class="project-card reveal-up delay-2">
+          <div class="project-img">
+            <img src="https://picsum.photos/seed/proj5/600/400" alt="App de Gestión de Citas" loading="lazy" />
+            <div class="project-overlay">
+              <div class="project-tech-tags">
+                <span>Flutter</span><span>Laravel API</span><span>Dart</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">App de Gestión de Citas</h3>
+            <p class="project-desc">Aplicación móvil para clínicas y consultorios con calendario inteligente, notificaciones push y historial de pacientes.</p>
+            <div class="project-actions">
+              <a href="#" class="btn btn-primary btn-sm ripple">Demo en Vivo</a>
+              <a href="#" class="btn btn-ghost btn-sm ripple">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                Repositorio
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 6 -->
+        <div class="project-card reveal-up delay-3">
+          <div class="project-img">
+            <img src="https://picsum.photos/seed/proj6/600/400" alt="Dashboard de Analytics" loading="lazy" />
+            <div class="project-overlay">
+              <div class="project-tech-tags">
+                <span>JavaScript</span><span>Chart.js</span><span>REST API</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Dashboard de Analytics</h3>
+            <p class="project-desc">Panel de métricas empresariales en tiempo real con gráficos interactivos, exportación de reportes y control de accesos.</p>
+            <div class="project-actions">
+              <a href="#" class="btn btn-primary btn-sm ripple">Demo en Vivo</a>
+              <a href="#" class="btn btn-ghost btn-sm ripple">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                Repositorio
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ EXPERIENCIA / TIMELINE ═══════════════════════════════ -->
+  <section id="experiencia" class="experience section-padding">
+    <div class="container">
+      <div class="section-label reveal-up">Mi Camino</div>
+      <h2 class="section-title text-center reveal-up delay-1">Experiencia & <span class="accent">Trayectoria</span></h2>
+      <p class="section-sub text-center reveal-up delay-2">Cada etapa forjó mi visión como desarrollador profesional.</p>
+
+      <div class="timeline">
+
+        <div class="timeline-item reveal-up delay-1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <span class="timeline-date">2020</span>
+            <h3>Inicio en Desarrollo Web</h3>
+            <p>Primeros pasos con HTML, CSS y JavaScript. Construcción de sitios estáticos y aprendizaje de fundamentos de programación web.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up delay-2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <span class="timeline-date">2021</span>
+            <h3>Backend con Laravel & PHP</h3>
+            <p>Dominio del framework Laravel para construir APIs RESTful robustas, autenticación avanzada y manejo de bases de datos relacionales.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up delay-3">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <span class="timeline-date">2022</span>
+            <h3>Desarrollo Móvil con Flutter</h3>
+            <p>Inmersión en el ecosistema Flutter/Dart para crear aplicaciones móviles multiplataforma con UIs fluidas y rendimiento nativo.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up delay-1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <span class="timeline-date">2023</span>
+            <h3>C# & .NET — Ecosistema Microsoft</h3>
+            <p>Expansión hacia el ecosistema Microsoft con C# y .NET para proyectos empresariales, APIs y soluciones de software escalable.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up delay-2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <span class="timeline-date">2024 – Presente</span>
+            <h3>Full Stack Senior & Proyectos Freelance</h3>
+            <p>Entrega de más de 20 proyectos para clientes reales. Arquitectura de sistemas completos, liderazgo técnico y enfoque en UX de alta calidad.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ SERVICIOS ═══════════════════════════════ -->
+  <section id="servicios" class="services section-padding">
+    <div class="container">
+      <div class="section-label reveal-up">Servicios</div>
+      <h2 class="section-title text-center reveal-up delay-1">¿En qué puedo <span class="accent">ayudarte?</span></h2>
+      <p class="section-sub text-center reveal-up delay-2">Soluciones digitales completas desde el diseño hasta el despliegue.</p>
+
+      <div class="services-grid">
+
+        <div class="service-card glass reveal-up delay-1">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="8" width="40" height="28" rx="3" stroke="var(--accent)" stroke-width="2"/><path d="M16 42h16M24 36v6" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/><path d="M12 20l5 5-5 5M21 30h8" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="service-title">Desarrollo Web</h3>
+          <p class="service-desc">Aplicaciones web modernas, rápidas y escalables. Desde landing pages hasta plataformas SaaS completas con las mejores prácticas de la industria.</p>
+          <ul class="service-features">
+            <li>Sitios corporativos y portfolios</li>
+            <li>Plataformas web a medida</li>
+            <li>APIs RESTful robustas</li>
+          </ul>
+        </div>
+
+        <div class="service-card glass reveal-up delay-2">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="14" y="4" width="20" height="36" rx="4" stroke="var(--accent)" stroke-width="2"/><circle cx="24" cy="36" r="2" fill="var(--accent)"/><path d="M18 10h12" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="service-title">Apps Móviles</h3>
+          <p class="service-desc">Aplicaciones iOS y Android de alto rendimiento con Flutter. Una sola base de código, experiencia nativa en ambas plataformas.</p>
+          <ul class="service-features">
+            <li>Apps multiplataforma con Flutter</li>
+            <li>Integración con APIs y servicios</li>
+            <li>Publicación en App Store y Play Store</li>
+          </ul>
+        </div>
+
+        <div class="service-card glass reveal-up delay-3">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="var(--accent)" stroke-width="2"/><path d="M24 14v10l6 4" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/><path d="M8 24h4M36 24h4M24 8v4M24 36v4" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="service-title">Backend & APIs</h3>
+          <p class="service-desc">Arquitecturas robustas y seguras con Laravel o .NET. Bases de datos optimizadas, autenticación avanzada y lógica de negocio compleja.</p>
+          <ul class="service-features">
+            <li>APIs RESTful y microservicios</li>
+            <li>Diseño y optimización de BD</li>
+            <li>Autenticación y seguridad</li>
+          </ul>
+        </div>
+
+        <div class="service-card glass reveal-up delay-1">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M6 36L18 18l8 10 6-7 10 15" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="38" cy="12" r="4" stroke="var(--accent)" stroke-width="2"/></svg>
+          </div>
+          <h3 class="service-title">UI/UX & Diseño</h3>
+          <p class="service-desc">Interfaces que no solo se ven bien, sino que convierten y retienen usuarios. Diseño centrado en la experiencia y la usabilidad real.</p>
+          <ul class="service-features">
+            <li>Diseño de interfaces modernas</li>
+            <li>Prototipos interactivos</li>
+            <li>Optimización de conversión</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CONTACTO ═══════════════════════════════ -->
+  <section id="contacto" class="contact section-padding">
+    <div class="container">
+      <div class="section-label reveal-up">Contacto</div>
+      <h2 class="section-title text-center reveal-up delay-1">Hablemos de tu <span class="accent">próximo proyecto</span></h2>
+      <p class="section-sub text-center reveal-up delay-2">¿Tienes una idea? Cuéntame. Respondo en menos de 24 horas.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal-up delay-1">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <p class="contact-label">Correo Electrónico</p>
+              <a href="mailto:carlos@ejemplo.com" class="contact-value">carlos@ejemplo.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </div>
+            <div>
+              <p class="contact-label">GitHub</p>
+              <a href="https://github.com" target="_blank" class="contact-value">github.com/alejandreyes</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </div>
+            <div>
+              <p class="contact-label">LinkedIn</p>
+              <a href="https://linkedin.com" target="_blank" class="contact-value">linkedin.com/in/carlosmaldonado</a>
+            </div>
+          </div>
+          <div class="contact-availability glass">
+            <div class="availability-dot"></div>
+            <p>Disponible para proyectos freelance y posiciones remotas.</p>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal-up delay-2">
+          <div id="form-success" class="form-success" style="display:none">
+            <div class="success-icon">✓</div>
+            <h3>¡Mensaje enviado!</h3>
+            <p>Gracias por escribir. Te respondo pronto.</p>
+          </div>
+          <form id="contact-form" class="contact-form glass" novalidate>
+            <div class="form-group">
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" autocomplete="name" />
+              <label for="nombre">Nombre</label>
+              <span class="form-error" id="error-nombre"></span>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="tu@correo.com" autocomplete="email" />
+              <label for="email">Correo Electrónico</label>
+              <span class="form-error" id="error-email"></span>
+            </div>
+            <div class="form-group">
+              <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame sobre tu proyecto…"></textarea>
+              <label for="mensaje">Mensaje</label>
+              <span class="form-error" id="error-mensaje"></span>
+            </div>
+            <button type="submit" class="btn btn-primary ripple btn-full">
+              <span>Enviar Mensaje</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#inicio" class="nav-logo">CM<span class="dot">.</span></a>
+          <p>Desarrollador Full Stack & Móvil.<br />Construyendo el futuro, línea a línea.</p>
+        </div>
+        <div class="footer-nav">
+          <a href="#sobre-mi">Sobre Mí</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://github.com" target="_blank" aria-label="GitHub" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:carlos@ejemplo.com" aria-label="Email" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Carlos Maldonado. Diseñado y desarrollado con precisión.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón volver arriba -->
+  <button id="back-to-top" aria-label="Volver arriba">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
